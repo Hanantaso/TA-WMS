@@ -1,0 +1,128 @@
+/* =========================================================
+   TOKENS + THEME (GLOBAL)
+   Theme dipilih via: html[data-theme="warm|light|dark"]
+   ========================================================= */
+
+/* Default = warm (kalau data-theme belum kepasang) */
+:root{
+  /* Base */
+  --bg: #d3c2b5;
+  --bg-2: #e6d6c6;
+
+  /* Surfaces */
+  --panel: rgba(255,255,255,0.25);
+  --panel-2: rgba(255,255,255,0.18);
+
+  /* Alias untuk komponen yang pakai surface */
+  --surface: rgba(255,255,255,0.18);
+  --surface-2: rgba(255,255,255,0.22);
+
+  /* Text */
+  --text: rgba(0,0,0,0.82);
+  --muted: rgba(0,0,0,0.58);
+
+  /* Brand */
+  --primary: #6a4a3a;
+  --accent: #c56a3b;
+
+  /* Alias brand untuk beberapa komponen */
+  --brand: rgba(87, 60, 39, 0.92);
+  --brand-hover: rgb(71, 47, 27);
+
+  /* Borders & shadow */
+  --border: rgba(0,0,0,0.08);
+  --shadow: 0 18px 40px rgba(0,0,0,0.18);
+  --shadow-soft: 0 10px 24px rgba(0,0,0,0.14);
+
+  /* Radius / blur */
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --blur: blur(14px);
+}
+
+/* WARM */
+html[data-theme="warm"]{
+  --bg: #d3c2b5;
+  --bg-2: #e6d6c6;
+
+  --panel: rgba(255,255,255,0.25);
+  --panel-2: rgba(255,255,255,0.18);
+
+  --surface: rgba(255,255,255,0.18);
+  --surface-2: rgba(255,255,255,0.22);
+
+  --text: rgba(0,0,0,0.82);
+  --muted: rgba(0,0,0,0.58);
+
+  --primary: #6a4a3a;
+  --accent: #c56a3b;
+
+  --brand: rgba(87, 60, 39, 0.92);
+  --brand-hover: rgb(71, 47, 27);
+
+  --border: rgba(0,0,0,0.08);
+  --shadow: 0 18px 40px rgba(0,0,0,0.18);
+  --shadow-soft: 0 10px 24px rgba(0,0,0,0.14);
+
+  --blur: blur(14px);
+}
+
+/* LIGHT */
+html[data-theme="light"]{
+  --bg: #f3f4f6;
+  --bg-2: #ffffff;
+
+  --panel: rgba(255,255,255,0.82);
+  --panel-2: rgba(255,255,255,0.70);
+
+  --surface: rgba(255,255,255,0.72);
+  --surface-2: rgba(255,255,255,0.86);
+
+  --text: rgba(17,24,39,0.92);
+  --muted: rgba(17,24,39,0.55);
+
+  --primary: #6a4a3a;
+  --accent: #c56a3b;
+
+  --brand: rgba(87, 60, 39, 0.92);
+  --brand-hover: rgb(71, 47, 27);
+
+  --border: rgba(0,0,0,0.10);
+  --shadow: 0 18px 40px rgba(0,0,0,0.14);
+  --shadow-soft: 0 10px 24px rgba(0,0,0,0.12);
+
+  --blur: blur(10px);
+}
+
+/* DARK */
+html[data-theme="dark"]{
+  --bg: #0f172a;
+  --bg-2: #111827;
+
+  --panel: rgba(255,255,255,0.08);
+  --panel-2: rgba(255,255,255,0.06);
+
+  --surface: rgba(255,255,255,0.06);
+  --surface-2: rgba(255,255,255,0.09);
+
+  --text: rgba(255,255,255,0.88);
+  --muted: rgba(255,255,255,0.60);
+
+  /* Brand di dark dibuat lebih “hangat” biar tetep cocok */
+  --primary: #ff9950;
+  --accent: #ffb37a;
+
+  --brand: rgba(255, 153, 80, 0.92);
+  --brand-hover: rgba(255, 153, 80, 0.80);
+
+  --border: rgba(255,255,255,0.14);
+  --shadow: 0 26px 70px rgba(0,0,0,0.50);
+  --shadow-soft: 0 14px 38px rgba(0,0,0,0.40);
+
+  --blur: blur(14px);
+}
+
+/* Transisi halus saat ganti theme */
+html, body{
+  transition: background-color 180ms ease, color 180ms ease;
+}

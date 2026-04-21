@@ -1,0 +1,538 @@
+.admin {
+  min-height: 100vh;
+}
+
+/* =========================================================
+    TOP
+   ========================================================= */
+
+.admin__hero {
+  position: relative;
+  height: 570px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 18px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  box-shadow: var(--shadow-soft);
+}
+
+.admin__hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(5px);
+  background: rgba(70, 50, 36, 0.35);
+  z-index: 1;
+}
+
+.admin__hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.00) 0%,
+    rgba(0, 0, 0, 0.35) 70%,
+    rgba(0, 0, 0, 0.712) 100%
+  );
+  z-index: 1;
+}
+
+.admin__heroInner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 18px;
+}
+
+.admin__heroInner--center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.admin__title {
+  margin: 0 0 22px;
+  color: #fff;
+  font-size: 44px;
+  line-height: 1.05;
+  font-weight: 800;
+  text-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+}
+
+.admin__title--center {
+  text-align: center;
+}
+
+.admin__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 26px;
+}
+
+.admin__stats--hero {
+  width: min(1100px, 92%);
+  align-items: center;
+}
+
+.admin__statCard {
+  padding: 34px 26px;
+  width: 100%;
+  border-radius: 22px;
+  color: #fff;
+}
+
+.admin__statCard--dark {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.30) 0%,
+    rgba(0, 0, 0, 0.58) 100%
+  );
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.664),
+    inset 0 1px 0 rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.admin__statCard--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 58px 30px;
+}
+
+.admin__statCard--drop {
+  transform: translateY(40px);
+}
+
+.admin__statLabel {
+  font-size: 13px;
+  opacity: .92;
+  color: #fff;
+}
+
+.admin__statValue {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 6px;
+  color: #fff;
+}
+
+.admin__statLabel--big {
+  font-size: 26px;
+  font-weight: 800;
+  opacity: 0.98;
+  text-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
+}
+
+.admin__statValue--big {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 8px;
+  opacity: 0.95;
+}
+
+.admin__statStatus {
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admin__statStatus--ok {
+  color: #00ff33;
+}
+
+.admin__statStatus--warn {
+  color: #ff2a2a;
+}
+
+/* =========================================================
+   MIDDLE
+   ========================================================= */
+
+.admin__middle {
+  padding: 34px 18px 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* layout baru sesuai gambar */
+.admin__middle--design{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 48px 24px 36px;
+}
+
+.admin__middleHeader{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.admin__middleHeaderLeft{
+  font-size: 18px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.admin__middleHeaderRight{
+  max-width: 520px;
+}
+
+.admin__middleHeaderTitle{
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.admin__middleHeaderSub{
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Divider garis */
+.admin__middleDivider1{
+  width: 82%;
+  height: 1px;
+  margin: 34px auto;
+  background: rgba(0,0,0,0.35);
+  opacity: 0.55;
+}
+
+.admin__middleDivider--bottom{
+  margin-top: 34px;
+}
+
+.admin__middleDivider{
+  width: 20%;
+  height: 1px;
+  margin: 24px auto;
+  background: rgba(0,0,0,0.35);
+  opacity: 0.55;
+}
+
+.admin__middleCenterTitle{
+  text-align: center;
+  font-weight: 800;
+  color: var(--muted);
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  margin-bottom: 20px;
+}
+
+/* Cards wrapper */
+.admin__middleCardsWrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.admin__middleCardsRow{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+/* Card jadi lebih besar */
+.admin__navCard{
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+
+  box-shadow: 0 18px 42px rgba(0,0,0,0.18);
+  transform: translateY(0);
+  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+
+.admin__navCard:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.22);
+  filter: saturate(1.05);
+}
+
+.admin__navCard:active{
+  transform: translateY(-3px);
+}
+
+.admin__navCard img{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  filter: saturate(0.95) contrast(0.95);
+  transform: scale(1.02);
+}
+
+/* tinggi gambar: dibesarkan */
+.admin__navCard--big img{
+  height: 260px;
+}
+
+.admin__navCard:not(.admin__navCard--big) img{
+  height: 200px;
+}
+
+/* overlay blur */
+.admin__imgCardOverlay{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 36%;
+
+  background: rgba(25, 18, 14, 0.34);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 -12px 28px rgba(0,0,0,0.22);
+}
+
+.admin__navCard:hover .admin__imgCardOverlay{
+  background: rgba(25, 18, 14, 0.42);
+}
+
+/* teks overlay */
+.admin__imgCardText{
+  position: absolute;
+  top: 14px;
+  left: 18px;
+
+  color: rgba(255,255,255,0.92);
+  font-size: 26px;
+  font-weight: 150;
+  letter-spacing: 0.2px;
+  text-shadow: 0 8px 22px rgba(0,0,0,0.40);
+}
+
+/* Brand bawah */
+.admin__middleBrand{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.admin__middleBrandLogo{
+  width: 90px;
+  height: auto;
+}
+
+/* responsive */
+@media (max-width: 980px){
+  .admin__middle--design{
+    max-width: 900px;
+    padding: 40px 18px 30px;
+  }
+
+  .admin__middleHeader{
+    gap: 26px;
+  }
+
+  .admin__middleHeaderTitle{
+    font-size: 24px;
+  }
+
+  .admin__navCard--big img{
+    height: 230px;
+  }
+
+  .admin__navCard:not(.admin__navCard--big) img{
+    height: 180px;
+  }
+
+  .admin__imgCardText{
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 720px){
+  .admin__middleHeader{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .admin__middleHeaderRight{
+    text-align: center;
+    max-width: 520px;
+  }
+
+  .admin__middleDivider{
+    width: 92%;
+  }
+
+  .admin__middleCardsRow{
+    grid-template-columns: 1fr;
+  }
+
+  .admin__navCard--big img{
+    height: 240px;
+  }
+
+  .admin__navCard:not(.admin__navCard--big) img{
+    height: 200px;
+  }
+}
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.admin__bottom {
+  padding: 44px 18px 90px;
+  margin-top: 22px;
+  border-top-left-radius: 26px;
+  border-top-right-radius: 26px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.22) 65%,
+    rgba(0, 0, 0, 0.30) 100%
+  );
+}
+
+.admin__bottomHeader {
+  max-width: 1200px;
+  margin: 0 auto 18px;
+  color: var(--text);
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+}
+
+.admin__brandCircle {
+  width: 140px;
+  height: 140px;
+  margin: 14px auto 30px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+
+  box-shadow: var(--shadow-soft);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin__brandCircleInner {
+  font-weight: 900;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.60);
+}
+
+.admin__BrandCircleLogo{
+  width: 90px;               
+  height: auto;
+}
+
+.admin__features {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.admin__featureCard {
+  padding: 26px;
+  min-height: 160px;
+
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.admin__featureCard--center {
+  transform: translateY(-8px);
+}
+
+.admin__featureTitle {
+  font-weight: 900;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.admin__featureText {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 980px) {
+  .admin__hero {
+    height: auto;
+  }
+  .admin__heroInner--center {
+    padding: 22px 16px 26px;
+  }
+  .admin__title {
+    font-size: 34px;
+  }
+
+  .admin__stats {
+    grid-template-columns: 1fr;
+  }
+  .admin__stats--hero {
+    width: min(520px, 92%);
+  }
+  .admin__statCard--drop {
+    transform: none;
+  }
+
+  .admin__features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   ✅ FIX KHUSUS: TEKS CARD STATISTIK JADI GELAP HANYA SAAT LIGHT
+   Warm/Dark tidak berubah (tetap putih).
+   ========================================================= */
+
+:root[data-theme="light"] .admin__statCard {
+  color: var(--text);
+  text-shadow: none;
+}
+
+:root[data-theme="light"] .admin__statLabel,
+:root[data-theme="light"] .admin__statValue,
+:root[data-theme="light"] .admin__statLabel--big,
+:root[data-theme="light"] .admin__statValue--big {
+  color: var(--text);
+  text-shadow: none;
+  opacity: 1;
+}
+
+/* label kecil sedikit muted supaya hierarki tetap bagus */
+:root[data-theme="light"] .admin__statLabel {
+  color: var(--muted);
+  opacity: 0.95;
+}
