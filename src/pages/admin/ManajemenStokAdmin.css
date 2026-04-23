@@ -1,400 +1,439 @@
+/* MANAJEMEN STOK GUDANG - PREMIUM DESIGN */
+
 .stokAdm {
-  --stok-bg: #f6f1ea;
-  --stok-surface: rgba(255, 255, 255, 0.72);
-  --stok-surface-strong: #ffffff;
-  --stok-border: rgba(99, 71, 52, 0.12);
-  --stok-text: #2c221c;
-  --stok-muted: #7a6a5c;
-  --stok-brown: #7b5438;
-  --stok-brown-dark: #64442e;
-  --stok-shadow: 0 18px 40px rgba(77, 54, 36, 0.08);
-  --stok-radius-xl: 24px;
-  --stok-radius-lg: 18px;
-  --stok-radius-md: 14px;
-  color: var(--stok-text);
+  padding: 24px;
+  background-color: var(--bg-2);
+  min-height: 100vh;
 }
 
+/* HERO / HEADER */
 .stokAdm__hero {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 20px;
+  align-items: flex-start;
+  margin-bottom: 32px;
 }
 
 .stokAdm__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
   margin: 0;
-  font-size: clamp(30px, 4vw, 48px);
-  line-height: 1.05;
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  color: var(--stok-text);
 }
 
 .stokAdm__subtitle {
-  margin: 10px 0 0;
-  max-width: 760px;
-  color: var(--stok-muted);
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 14px;
+  color: var(--muted);
+  margin: 4px 0 0;
 }
 
 .stokAdm__heroBadge {
-  white-space: nowrap;
-  padding: 10px 14px;
+  background: var(--bg);
+  padding: 8px 16px;
   border-radius: 999px;
-  background: rgba(123, 84, 56, 0.12);
-  color: var(--stok-brown-dark);
+  border: 1px solid var(--border);
   font-size: 13px;
-  font-weight: 800;
-  border: 1px solid rgba(123, 84, 56, 0.14);
-}
-
-.stokAdm__banner {
+  font-weight: 600;
+  color: var(--text);
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 16px;
-  margin-bottom: 18px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(226, 245, 233, 0.95), rgba(241, 250, 245, 0.95));
-  border: 1px solid rgba(46, 125, 50, 0.15);
-  box-shadow: 0 14px 28px rgba(46, 125, 50, 0.08);
-  font-weight: 700;
-  color: #2f6b3a;
+  gap: 8px;
+}
+
+/* BANNER */
+.stokAdm__banner {
+  background: #fff8f3;
+  border: 1px solid rgba(228, 145, 90, 0.2);
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary-hover);
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .stokAdm__bannerDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: #3ca45c;
-  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
 }
 
+/* GRID LAYOUT */
 .stokAdm__topGrid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
-  gap: 20px;
-  margin-bottom: 22px;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
 }
 
 .stokAdm__panel {
-  background: var(--stok-surface);
-  border: 1px solid var(--stok-border);
-  border-radius: var(--stok-radius-xl);
-  box-shadow: var(--stok-shadow);
-  backdrop-filter: blur(10px);
-  overflow: hidden;
-}
-
-.stokAdm__panel--action {
-  align-self: start;
+  background: var(--bg);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  padding: 24px;
 }
 
 .stokAdm__panelHead {
+  margin-bottom: 24px;
   display: flex;
-  align-items: start;
   justify-content: space-between;
-  gap: 12px;
-  padding: 22px 22px 10px;
+  align-items: flex-start;
 }
 
 .stokAdm__panelHead h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
   margin: 0;
-  font-size: 28px;
-  line-height: 1.15;
-  font-weight: 850;
-  letter-spacing: -0.02em;
 }
 
 .stokAdm__panelHead p {
-  margin: 6px 0 0;
-  color: var(--stok-muted);
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 4px 0 0;
 }
 
+/* METRIC CARDS */
 .stokAdm__cards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  padding: 10px 22px 22px;
 }
 
 .stokAdm__metric {
-  position: relative;
   padding: 20px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(123, 84, 56, 0.08);
-  box-shadow: 0 12px 28px rgba(77, 54, 36, 0.08);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border-radius: 16px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-2);
+  transition: all 0.2s;
 }
 
 .stokAdm__metric:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 30px rgba(77, 54, 36, 0.1);
-}
-
-.stokAdm__metric::after {
-  content: "";
-  position: absolute;
-  inset: auto -28px -28px auto;
-  width: 92px;
-  height: 92px;
-  border-radius: 999px;
-  opacity: 0.12;
-}
-
-.stokAdm__metric--brown::after {
-  background: #8c6446;
-}
-
-.stokAdm__metric--orange::after {
-  background: #d87b2d;
-}
-
-.stokAdm__metric--green::after {
-  background: #4d9f63;
+  border-color: var(--primary);
 }
 
 .stokAdm__metricIcon {
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
-  display: grid;
-  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
   margin-bottom: 16px;
-  font-size: 22px;
-  background: rgba(123, 84, 56, 0.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
 .stokAdm__metricLabel {
-  color: var(--stok-muted);
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
 }
 
 .stokAdm__metricValue {
-  margin-top: 10px;
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 1;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 8px 0;
+}
+/* TAGS & BADGES */
+.tag-kategori {
+  font-size: 10px;
+  background: #f0f7ff;
+  color: #007bff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tag-kategori[style*="Plumbing"] { background: #f6ffed; color: #52c41a; }
+
+.date-filter {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-more {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+/* FOOTER */
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 20px;
+}
+
+.rows-per-page {
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rows-per-page select {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.page-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.page-controls button {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.page-controls button.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.page-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .stokAdm__metricSub {
-  margin-top: 10px;
-  font-size: 13px;
-  color: var(--stok-muted);
-  font-weight: 600;
+  font-size: 12px;
+  color: var(--muted);
 }
 
+/* ACTION SECTION */
 .stokAdm__actionButtons {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 10px 22px 0;
-}
-
-.stokAdm__primaryBtn,
-.stokAdm__ghostBtn {
-  appearance: none;
-  border: none;
-  cursor: pointer;
-  border-radius: 14px;
-  min-height: 50px;
-  padding: 12px 18px;
-  font-size: 15px;
-  font-weight: 800;
-  transition: transform 0.12s ease, box-shadow 0.18s ease, background 0.18s ease, opacity 0.18s ease;
+  margin-bottom: 20px;
 }
 
 .stokAdm__primaryBtn {
-  background: linear-gradient(135deg, var(--stok-brown), var(--stok-brown-dark));
+  background: var(--primary);
   color: #fff;
-  box-shadow: 0 14px 28px rgba(100, 68, 46, 0.22);
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
 }
 
 .stokAdm__primaryBtn:hover {
-  transform: translateY(-1px);
+  background: var(--primary-hover);
 }
 
 .stokAdm__ghostBtn {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--stok-brown-dark);
-  border: 1px solid rgba(123, 84, 56, 0.16);
-}
-
-.stokAdm__ghostBtn:disabled {
-  opacity: 0.65;
-  cursor: not-allowed;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .stokAdm__note {
-  margin: 18px 22px 22px;
-  padding: 14px 16px;
-  border-radius: 16px;
-  background: rgba(123, 84, 56, 0.06);
-  color: var(--stok-muted);
-  line-height: 1.6;
-  font-size: 14px;
+  background: #fff8f3;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
 }
 
+.stokAdm__note b { color: var(--primary); }
+
+/* TABLE */
 .stokAdm__tablePanel {
-  padding-bottom: 12px;
+  padding: 24px;
 }
 
-.stokAdm__panelHead--table {
-  align-items: end;
-}
-
-.stokAdm__tableCount {
-  white-space: nowrap;
-  color: var(--stok-muted);
-  font-size: 14px;
-  font-weight: 800;
+.stokAdm__tableHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .stokAdm__tableWrap {
-  padding: 0 22px 22px;
+  margin: 0 -24px;
   overflow-x: auto;
 }
 
 .stokAdm__table {
   width: 100%;
-  min-width: 860px;
-  border-collapse: separate;
-  border-spacing: 0;
-  overflow: hidden;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(123, 84, 56, 0.08);
+  border-collapse: collapse;
 }
 
-.stokAdm__table thead th {
-  background: #f3ede6;
-  color: #6c5b4f;
-  font-size: 13px;
-  font-weight: 900;
+.stokAdm__table th {
+  background: var(--bg-2);
+  padding: 16px;
   text-align: left;
-  padding: 16px 14px;
-  border-bottom: 1px solid rgba(123, 84, 56, 0.08);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.stokAdm__table tbody td {
-  padding: 16px 14px;
-  border-bottom: 1px solid rgba(123, 84, 56, 0.08);
-  vertical-align: middle;
+.stokAdm__table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-subtle);
   font-size: 14px;
+  color: var(--text);
 }
 
-.stokAdm__table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.stokAdm__table tbody tr:hover {
-  background: rgba(248, 243, 238, 0.72);
-}
-
-.stokAdm__id {
-  font-weight: 900;
-  color: var(--stok-text);
-}
-
-.stokAdm__qty {
-  font-weight: 800;
-  color: var(--stok-brown-dark);
-}
+.stokAdm__id { font-weight: 700; }
+.stokAdm__qty { font-weight: 700; }
 
 .stokAdm__status {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 96px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 800;
-  border: 1px solid transparent;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .stokAdm__status--done {
-  color: #2f7d46;
-  background: rgba(79, 180, 117, 0.12);
-  border-color: rgba(79, 180, 117, 0.22);
+  background: #e6f7ed;
+  color: #2e7d32;
 }
 
 .stokAdm__status--pending {
-  color: #b06a00;
-  background: rgba(255, 184, 77, 0.14);
-  border-color: rgba(255, 184, 77, 0.28);
+  background: #fff7e6;
+  color: #fa8c16;
 }
 
+/* MODAL / FORM OVERLAY */
 .stokAdm__overlay {
   position: fixed;
   inset: 0;
-  z-index: 9999;
-  display: grid;
-  place-items: center;
-  padding: 22px;
-  background: rgba(45, 30, 20, 0.35);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
 }
 
 .stokAdm__modal {
-  width: min(860px, 100%);
-  max-height: 90vh;
-  overflow: auto;
+  background: var(--bg);
+  width: 100%;
+  max-width: 600px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(123, 84, 56, 0.1);
-  box-shadow: 0 30px 70px rgba(42, 28, 19, 0.24);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
 }
 
 .stokAdm__modalHead {
+  padding: 24px;
+  border-bottom: 1px solid var(--border-subtle);
   display: flex;
-  align-items: start;
   justify-content: space-between;
-  gap: 16px;
-  padding: 22px 22px 14px;
-  border-bottom: 1px solid rgba(123, 84, 56, 0.08);
+  align-items: flex-start;
 }
 
 .stokAdm__modalHead h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
   margin: 0;
-  font-size: 24px;
-  font-weight: 900;
 }
 
 .stokAdm__modalHead p {
-  margin: 8px 0 0;
-  color: var(--stok-muted);
-  line-height: 1.5;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 6px 0 0;
 }
 
 .stokAdm__closeBtn {
-  appearance: none;
+  background: var(--bg-2);
   border: none;
-  background: rgba(123, 84, 56, 0.08);
-  color: var(--stok-brown-dark);
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  font-size: 24px;
-  line-height: 1;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  font-size: 20px;
+  color: var(--muted);
+  transition: all 0.2s;
+}
+
+.stokAdm__closeBtn:hover {
+  background: var(--border-subtle);
+  color: var(--text);
 }
 
 .stokAdm__form {
-  padding: 20px 22px 22px;
+  padding: 24px;
 }
 
 .stokAdm__formGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
 }
 
 .stokAdm__field {
@@ -403,120 +442,44 @@
   gap: 8px;
 }
 
-.stokAdm__field--full {
-  grid-column: 1 / -1;
-}
-
 .stokAdm__field span {
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--stok-text);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .stokAdm__field input,
-.stokAdm__field select,
-.stokAdm__field textarea {
-  width: 100%;
-  border: 1px solid rgba(123, 84, 56, 0.14);
-  border-radius: 14px;
-  background: #fff;
-  padding: 13px 14px;
+.stokAdm__field select {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  padding: 12px 16px;
+  border-radius: 12px;
   font-size: 14px;
-  color: var(--stok-text);
+  color: var(--text);
   outline: none;
-  transition: border-color 0.18s ease, box-shadow 0.18s ease;
-  box-sizing: border-box;
-}
-
-.stokAdm__field textarea {
-  resize: vertical;
-  min-height: 120px;
+  transition: all 0.2s;
 }
 
 .stokAdm__field input:focus,
-.stokAdm__field select:focus,
-.stokAdm__field textarea:focus {
-  border-color: rgba(123, 84, 56, 0.32);
-  box-shadow: 0 0 0 4px rgba(123, 84, 56, 0.08);
-}
-
-.stokAdm__formHint {
-  margin-top: 18px;
-  padding: 14px 16px;
-  border-radius: 16px;
-  background: #f8f3ee;
-  color: var(--stok-muted);
-  line-height: 1.6;
-  font-size: 14px;
+.stokAdm__field select:focus {
+  border-color: var(--primary);
+  background: var(--bg);
+  box-shadow: 0 0 0 4px rgba(228, 145, 90, 0.1);
 }
 
 .stokAdm__formActions {
   display: flex;
   justify-content: flex-end;
   gap: 12px;
-  margin-top: 18px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
 }
 
-.stokAdm__toast {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 10000;
-  max-width: min(420px, calc(100vw - 32px));
-  padding: 14px 16px;
-  border-radius: 16px;
-  background: #2f241d;
-  color: #fff;
-  box-shadow: 0 18px 38px rgba(35, 24, 17, 0.28);
-  font-weight: 700;
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .stokAdm__topGrid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 1080px) {
-  .stokAdm__topGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 860px) {
-  .stokAdm__cards {
-    grid-template-columns: 1fr;
-  }
-
-  .stokAdm__formGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .stokAdm__hero {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .stokAdm__panelHead--table {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 640px) {
-  .stokAdm__title {
-    font-size: 30px;
-  }
-
-  .stokAdm__panelHead,
-  .stokAdm__cards,
-  .stokAdm__tableWrap,
-  .stokAdm__form,
-  .stokAdm__modalHead {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .stokAdm__formActions {
-    flex-direction: column-reverse;
-  }
-
-  .stokAdm__primaryBtn,
-  .stokAdm__ghostBtn {
-    width: 100%;
-  }
+@media (max-width: 768px) {
+  .stokAdm__cards { grid-template-columns: 1fr; }
 }
